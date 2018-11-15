@@ -1,3 +1,9 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [MyViewController.cs](./CS/CustomizeRibbonTemplateExample.Module/Controllers/MyViewController.cs)
+* **[Program.cs](./CS/CustomizeRibbonTemplateExample.Win/Program.cs)**
+<!-- default file list end -->
 # How to: Create a Custom WinForms Ribbon Template
 
 
