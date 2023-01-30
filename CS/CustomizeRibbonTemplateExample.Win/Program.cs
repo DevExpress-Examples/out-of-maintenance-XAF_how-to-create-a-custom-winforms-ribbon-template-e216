@@ -33,10 +33,12 @@ namespace CustomizeRibbonTemplateExample.Win
 #endif
             try {
                 winApplication.CreateCustomTemplate += delegate(object sender, CreateCustomTemplateEventArgs e) {
-                    bool isRibbon = ((IModelOptionsWin)e.Application.Model.Options).FormStyle == RibbonFormStyle.Ribbon;
-                    if (isRibbon && e.Context == TemplateContext.View)
-                    {
-                        e.Template = new DetailRibbonForm1();
+                    if (e.Application.Model != null {
+                        bool isRibbon = ((IModelOptionsWin)e.Application.Model.Options).FormStyle == RibbonFormStyle.Ribbon;
+                        if (isRibbon && e.Context == TemplateContext.View)
+                        {
+                            e.Template = new DetailRibbonForm1();
+                        }
                     }
                 };
 
