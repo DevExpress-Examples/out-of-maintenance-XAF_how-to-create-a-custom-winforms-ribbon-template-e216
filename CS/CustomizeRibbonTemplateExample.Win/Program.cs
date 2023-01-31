@@ -14,6 +14,7 @@ namespace CustomizeRibbonTemplateExample.Win
         /// </summary>
         [STAThread]
         static void Main() {
+            DevExpress.ExpressApp.FrameworkSettings.DefaultSettingsCompatibilityMode = DevExpress.ExpressApp.FrameworkSettingsCompatibilityMode.v20_1;
 #if EASYTEST
             DevExpress.ExpressApp.Win.EasyTest.EasyTestRemotingRegistration.Register();
 #endif
@@ -33,7 +34,7 @@ namespace CustomizeRibbonTemplateExample.Win
 #endif
             try {
                 winApplication.CreateCustomTemplate += delegate(object sender, CreateCustomTemplateEventArgs e) {
-                    if (e.Application.Model != null {
+                    if (e.Application.Model != null) {
                         bool isRibbon = ((IModelOptionsWin)e.Application.Model.Options).FormStyle == RibbonFormStyle.Ribbon;
                         if (isRibbon && e.Context == TemplateContext.View)
                         {
